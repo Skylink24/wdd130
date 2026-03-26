@@ -27,7 +27,6 @@ main img {
     width: 150px;
     height: auto;
     border: 1px;
-    solid: #3b2e2e;
     padding: 10px;
     box-shadow: 0 0 30px grey;
 }

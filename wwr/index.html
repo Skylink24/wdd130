@@ -5,91 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>White Water Rafting | Home</title>
-
+    <title>White Water Rafting | Adventure Starts Here</title>
     <meta name="description"
       content="Experience unforgettable white water rafting adventures. Explore thrilling trips, expert guides, and breathtaking rivers.">
     <meta name="author" content="Pelemo Ekundayo Gbenga">
 
     <link rel="stylesheet" href="styles/rafting.css">
+
+    <!-- Google Font (Premium Look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header>
-        <img src="images/logo.png" alt="Rafting Company Logo">
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <img src="images/logo.png" alt="Rafting Logo" class="logo">
 
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
         </nav>
+
     </header>
 
     <!-- ================= HERO ================= -->
     <section class="hero">
+
         <img src="images/hero.jpg" alt="Rafting Adventure">
 
-        <div class="hero-text">
-            <h1>Adventure Starts Here</h1>
-            <p>Ride the wild rivers. Feel the adrenaline. Create memories.</p>
+        <div class="overlay"></div>
 
-            <div class="cta-buttons">
-                <a href="trips.html" class="btn-primary">Explore Trips</a>
-                <a href="contact.html" class="btn-secondary">Book Now</a>
+        <div class="hero-content">
+            <h1>Experience The Ultimate Adventure</h1>
+            <p>Premium white-water rafting experiences crafted for thrill seekers.</p>
+
+            <div class="hero-buttons">
+                <a href="trips.html" class="btn main-btn">Explore Trips</a>
+                <a href="contact.html" class="btn ghost-btn">Book Adventure</a>
             </div>
         </div>
+
     </section>
 
     <!-- ================= MAIN ================= -->
     <main>
 
-        <!-- COMPANY INTRO -->
-        <section class="intro">
-            <h2>Welcome to White Water Rafting</h2>
+        <section class="about-preview reveal">
+            <h2>Why Choose Us</h2>
             <p>
-                We deliver world-class rafting experiences guided by professionals who
-                prioritize safety, adventure, and unforgettable memories. Whether you are
-                a beginner or thrill seeker, our trips are designed for excitement and fun.
+                We combine safety, excitement, and unforgettable landscapes to create
+                world-class rafting adventures guided by certified professionals.
             </p>
         </section>
 
-        <!-- ADVENTURE CARDS -->
-        <section>
-            <h2>Featured Adventures</h2>
+        <section class="features">
 
-            <div class="adventures">
-
-                <div class="card">
-                    <img src="images/raft1.jpg" alt="River Rapids">
-                    <h3>River Rapids</h3>
-                    <p>High-energy rafting through powerful currents.</p>
-                </div>
-
-                <div class="card">
-                    <img src="images/raft2.jpg" alt="Mountain Rivers">
-                    <h3>Mountain Rivers</h3>
-                    <p>Breathtaking scenery combined with adventure.</p>
-                </div>
-
-                <div class="card">
-                    <img src="images/raft3.jpg" alt="Family Trips">
-                    <h3>Family Adventures</h3>
-                    <p>Safe and exciting trips perfect for families.</p>
-                </div>
-
+            <div class="feature-card reveal">
+                <img src="images/raft1.jpg" alt="">
+                <h3>Extreme Rapids</h3>
+                <p>Adrenaline-filled journeys through powerful river currents.</p>
             </div>
+
+            <div class="feature-card reveal">
+                <img src="images/raft2.jpg" alt="">
+                <h3>Scenic Routes</h3>
+                <p>Explore breathtaking valleys and untouched nature.</p>
+            </div>
+
+            <div class="feature-card reveal">
+                <img src="images/raft3.jpg" alt="">
+                <h3>Family Friendly</h3>
+                <p>Safe adventures designed for all experience levels.</p>
+            </div>
+
         </section>
 
-        <!-- CALL TO ACTION -->
-        <section class="cta">
-            <h2>Ready for the Adventure?</h2>
-            <p>Join thousands of happy explorers every year.</p>
-            <a href="trips.html" class="btn-primary">Start Your Journey</a>
+        <section class="cta reveal">
+            <h2>Your Next Adventure Awaits</h2>
+            <p>Book today and experience nature like never before.</p>
+            <a href="trips.html" class="btn main-btn">Start Now</a>
         </section>
 
     </main>
@@ -97,15 +97,31 @@
     <!-- ================= FOOTER ================= -->
     <footer>
 
-        <p>© 2026 White Water Rafting | Your Name</p>
+        <p>© 2026 White Water Rafting | Pelemo Ekundayo Gbenga</p>
 
-        <nav class="socialmedia">
-            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-        </nav>
+        <div class="socials">
+            <img src="images/facebook.jpg" alt="">
+            <img src="images/instagram.jpg" alt="">
+            <img src="images/linkedin.jpg" alt="">
+        </div>
 
     </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+
+        window.addEventListener("scroll", () => {
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (top < windowHeight - 100) {
+                    el.classList.add("active");
+                }
+            });
+        });
+    </script>
 
 </body>
 

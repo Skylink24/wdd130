@@ -1,191 +1,53 @@
-/* ===============================
-   CSS VARIABLES
-=================================*/
-:root {
-    --primary-color: #055a05;
-    --secondary-color: #f4a261;
-    --accent1-color: #264653;
-    --accent2-color: #e9c46a;
+/* ================= GLOBAL ================= */
 
-    --heading-font: "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* ===============================
-   RESET
-=================================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===============================
-   BODY
-=================================*/
 body {
-    --body-font: "Poppins", sans-serif;
-    font-family: var(--body-font);
-    color: var(--accent1-color);
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #222;
 }
 
-/* CENTER PAGE */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
-}
+/* ================= NAVBAR ================= */
 
-/* ===============================
-   HEADER
-=================================*/
-header {
+.navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primary-color);
-    color: var(--accent2-color);
-    padding: 10px;
+    padding: 15px 50px;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1000;
 }
 
-header img {
+.logo {
     width: 120px;
 }
 
-/* NAVIGATION */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
+.navbar nav a {
     color: white;
+    margin-left: 25px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    transition: .3s;
 }
 
-/* ===============================
-   HEADINGS
-=================================*/
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* SPACING */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* ===============================
-   HERO SECTION
-=================================*/
-.hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* HERO TITLE OVERLAY */
-.hero h1 {
-    position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    opacity: 0.8;
-    background-color: var(--accent1-color);
-    color: white;
-}
-
-/* HERO ARTICLE OVERLAY */
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-}
-
-/* ARTICLE IMAGE */
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 10px;
-}
-
-/* ================= ROOT VARIABLES ================= */
-
-:root {
-    --primary: #0b6e4f;
-    --secondary: #f4a261;
-    --dark: #1d3557;
-    --light: #f8f9fa;
-    --white: #ffffff;
-}
-
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* BODY */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--light);
-    color: #333;
-    line-height: 1.6;
-}
-
-/* ================= HEADER ================= */
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--primary);
-    padding: 15px 40px;
-}
-
-header img {
-    width: 120px;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: var(--secondary);
+.navbar nav a:hover {
+    color: #f4a261;
 }
 
 /* ================= HERO ================= */
 
 .hero {
     position: relative;
-    height: 85vh;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .hero img {
@@ -194,46 +56,58 @@ nav a:hover {
     object-fit: cover;
 }
 
-.hero-text {
+.overlay {
     position: absolute;
-    top: 45%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, .6),
+            rgba(0, 0, 0, .3));
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    max-width: 700px;
 }
 
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero-text p {
+.hero-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
 }
 
-/* BUTTONS */
-.btn-primary {
-    background: var(--secondary);
-    color: white;
-    padding: 12px 24px;
+.hero-content p {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
     text-decoration: none;
-    border-radius: 25px;
-    margin: 5px;
+    margin: 8px;
     display: inline-block;
+    transition: .3s;
 }
 
-.btn-secondary {
-    background: white;
-    color: var(--primary);
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 25px;
+.main-btn {
+    background: #f4a261;
+    color: white;
 }
 
-.btn-primary:hover,
-.btn-secondary:hover {
-    opacity: 0.85;
+.ghost-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
 }
 
 /* ================= MAIN ================= */
@@ -241,113 +115,96 @@ nav a:hover {
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 80px 20px;
 }
 
-section {
-    margin: 40px 0;
+.about-preview {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* FEATURE CARDS */
+
+.feature-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+    transition: .4s;
     text-align: center;
 }
 
-/* INTRO */
-.intro p {
-    max-width: 700px;
-    margin: auto;
-}
-
-/* ================= CARDS ================= */
-
-.adventures {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 20px;
-}
-
-.card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-}
-
-.card img {
+.feature-card img {
     width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.card h3 {
-    margin: 15px 0 5px;
+.feature-card:hover {
+    transform: translateY(-10px);
 }
 
-/* CTA SECTION */
+/* CTA */
+
 .cta {
-    background: var(--primary);
+    margin-top: 70px;
+    text-align: center;
+    background: #0b6e4f;
     color: white;
-    padding: 40px;
-    border-radius: 12px;
+    padding: 60px;
+    border-radius: 15px;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-    background: var(--dark);
+    background: #1d3557;
     color: white;
-    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 25px 50px;
 }
 
-.socialmedia img {
-    width: 25px;
-    margin-left: 10px;
+.socials img {
+    width: 26px;
+    margin-left: 12px;
 }
 
-.socialmedia a {
-    text-decoration: none;
+/* ================= SCROLL ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ================= MOBILE ================= */
 
 @media(max-width:768px) {
-    header {
-        flex-direction: column;
-        gap: 10px;
+
+    .hero-content h1 {
+        font-size: 2.2rem;
     }
 
-    .hero-text h1 {
-        font-size: 2rem;
+    .navbar {
+        padding: 15px 20px;
     }
 
     footer {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
-}
 
-/* ===============================
-   FOOTER
-=================================*/
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px;
-}
-
-/* SOCIAL MEDIA */
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 30px;
-    margin-left: 10px;
 }

@@ -1,3 +1,22 @@
+/* ===============================
+   CSS VARIABLES
+================================*/
+:root {
+    --primary-color: #055a05;
+    --secondary-color: #f4a261;
+    --accent1-color: #264653;
+    --accent2-color: #e9c46a;
+
+    --primary: #0b6e4f;
+    --secondary: #f4a261;
+    --dark: #1d3557;
+    --light: #f8f9fa;
+    --white: #ffffff;
+
+    --heading-font: "Georgia", serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
 /* ================= GLOBAL ================= */
 
 * {
@@ -7,7 +26,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'helvetica', sans-serif;
     background: #f5f7fa;
     color: #222;
 }

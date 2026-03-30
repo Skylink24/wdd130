@@ -6,13 +6,6 @@
     --secondary-color: #f4a261;
     --accent1-color: #264653;
     --accent2-color: #e9c46a;
-
-    --primary: #0b6e4f;
-    --secondary: #f4a261;
-    --dark: #1d3557;
-    --light: #f8f9fa;
-    --white: #ffff;
-
     --heading-font: "Georgia", serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -26,9 +19,15 @@
 }
 
 body {
-    font-family: 'helvetica', sans-serif;
-    background: #f5f7fa;
-    color: #222;
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+}
+
+header,
+main,
+footer {
+    width: 900px;
+    margin: 0 auto;
 }
 
 /* ================= NAVBAR ================= */
@@ -274,6 +273,18 @@ nav {
 /* ===================================
    HEADER
 =================================== */
+.site-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 12px;
+}
+
+.logo {
+    width: 150px;
+}
+
 header {
     display: flex;
     justify-content: space-between;

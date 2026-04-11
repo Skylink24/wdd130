@@ -3,44 +3,124 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Us</title>
-    <img src="images/logo.png" alt="Company Logo" class="logo">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact White Water Rafting Company">
+    <meta name="author" content="Pelemo Ekundayo Gbenga">
+
+    <title>Contact Us | White Water Rafting</title>
+
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <h2>Whitewater Rafting Company</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- HEADER -->
+    <header class="site-header">
+        <img src="images/logo.png" alt="Rafting Logo" class="logo">
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="container">
-        <h1>Contact Us</h1>
+    <!-- MAIN -->
+    <main>
 
-        <p>Email: info@adventureco.com</p>
-        <p>Phone: +234 000 000 0000</p>
+        <!-- COMPANY INFO -->
+        <section class="company-info">
+            <h1>White Water Rafting Company</h1>
+            <p>123 Main River Street</p>
+            <p>Kolob, California</p>
+            <p>+1 999 999 9999</p>
+            <p>info@whitewater.com</p>
+        </section>
 
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- CONTACT + MAP -->
+        <section class="contact-grid">
 
-    </section>
+            <!-- MAP -->
+            <div class="map">
+                <iframe src="https://www.google.com/maps?q=California&output=embed"></iframe>
+            </div>
 
+            <!-- FORM -->
+            <form class="contact-form">
+
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Placeholder" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Placeholder" required>
+
+                <fieldset>
+                    <legend>Message Purpose</legend>
+
+                    <label><input type="radio" name="purpose"> General Inquiry</label>
+                    <label><input type="radio" name="purpose"> Reservation Question</label>
+                    <label><input type="radio" name="purpose"> Website Suggestion</label>
+
+                </fieldset>
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Type here"></textarea>
+
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Please Subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Get in Touch!</button>
+
+            </form>
+
+        </section>
+
+        <!-- EMPLOYEES -->
+        <section class="employees">
+
+            <h2>We Are Here to Serve You</h2>
+
+            <div class="employee-gallery">
+
+                <figure>
+                    <img src="images/employee1.jpg" alt="Employee 1">
+                    <figcaption>John Micheal</figcaption>
+                    <figcaption>Lead Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee2.jpg" alt="Employee 2">
+                    <figcaption>Janet Joe</figcaption>
+                    <figcaption>Safety Instructor</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee3.jpg" alt="Employee 3">
+                    <figcaption>Ziram Susan</figcaption>
+                    <figcaption>Operations Manager</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 Whitewater Rafting Company</p>
+        <p>Footer Content including Social Media Icons/Links</p>
+
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.jpg" alt="Facebook"></a>
+            <a href="#"><img src="images/linkedin.jpg" alt="LinkedIn"></a>
+            <a href="#"><img src="images/instagram.jpg" alt="Instagram"></a>
+        </nav>
     </footer>
 
 </body>

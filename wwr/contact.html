@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Contact White Water Rafting Company">
-    <meta name="author" content="Pelemo Ekundayo Gbenga">
+    <meta name="description" content="Contact White Water Rafting Company for reservations, inquiries, and exciting adventure bookings. Reach us by phone, email, or visit our location>
+    <meta name=" author" content="Pelemo Ekundayo Gbenga">
 
     <title>Contact Us | White Water Rafting</title>
 
@@ -52,29 +52,45 @@
             <!-- FORM -->
             <form class="contact-form">
 
+                <!-- NAME -->
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Placeholder" required>
+                <input type="text" id="name" name="name" placeholder="Placeholder" required>
 
+                <!-- EMAIL -->
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="Placeholder" required>
+                <input type="email" id="email" name="email" placeholder="Placeholder" required>
 
+                <!-- PURPOSE -->
                 <fieldset>
                     <legend>Message Purpose</legend>
 
-                    <label><input type="radio" name="purpose"> General Inquiry</label>
-                    <label><input type="radio" name="purpose"> Reservation Question</label>
-                    <label><input type="radio" name="purpose"> Website Suggestion</label>
+                    <label for="general">
+                        <input type="radio" id="general" name="purpose" value="general">
+                        General Inquiry
+                    </label>
 
+                    <label for="reservation">
+                        <input type="radio" id="reservation" name="purpose" value="reservation">
+                        Reservation Question
+                    </label>
+
+                    <label for="suggestion">
+                        <input type="radio" id="suggestion" name="purpose" value="suggestion">
+                        Website Suggestion
+                    </label>
                 </fieldset>
 
+                <!-- MESSAGE -->
                 <label for="message">Message</label>
-                <textarea id="message" placeholder="Type here"></textarea>
+                <textarea id="message" name="message" placeholder="Type here"></textarea>
 
-                <label class="checkbox">
-                    <input type="checkbox">
-                    Please Subscribe me to the monthly newsletter
+                <!-- CHECKBOX -->
+                <label for="subscribe" class="checkbox">
+                    <input type="checkbox" id="subscribe" name="subscribe">
+                    Please subscribe me to the monthly newsletter
                 </label>
 
+                <!-- SUBMIT -->
                 <button type="submit">Get in Touch!</button>
 
             </form>
@@ -89,19 +105,22 @@
             <div class="employee-gallery">
 
                 <figure>
-                    <img src="images/employee1.jpg" alt="Employee 1">
+                    <img src="images/employee1.jpg"
+                      alt="Professional rafting guide assisting clients">
                     <figcaption>John Micheal</figcaption>
                     <figcaption>Lead Guide</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/employee2.jpg" alt="Employee 2">
+                    <img src="images/employee2.jpg"
+                      alt="Professional rafting guide assisting clients">
                     <figcaption>Janet Joe</figcaption>
                     <figcaption>Safety Instructor</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/employee3.jpg" alt="Employee 3">
+                    <img src="images/employee3.jpg"
+                      alt="Professional rafting guide assisting clients">
                     <figcaption>Ziram Susan</figcaption>
                     <figcaption>Operations Manager</figcaption>
                 </figure>
@@ -114,7 +133,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>Footer Content including Social Media Icons/Links</p>
+        <p>© 2026 White Water Rafting | Pelemo Ekundayo Gbenga</p>
 
         <nav class="socialmedia">
             <a href="#"><img src="images/facebook.jpg" alt="Facebook"></a>

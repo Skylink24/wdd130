@@ -1,6 +1,4 @@
-/* ===================================
-   CSS VARIABLES
-=================================== */
+/* ================= ROOT VARIABLES ================= */
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
@@ -8,7 +6,6 @@
     --accent2-color: #e9c46a;
 
     --primary: #0b6e4f;
-    --secondary: #f4a261;
     --dark: #1d3557;
     --light: #f8f9fa;
     --white: #ffffff;
@@ -17,156 +14,173 @@
     --body-font: Arial, Helvetica, sans-serif;
 }
 
-/* ===================================
-   RESET
-=================================== */
-
-/* ================= GLOBAL ================= */
-
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ================= BASE ================= */
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    background-color: var(--light);
+    line-height: 1.6;
 }
 
 header,
 main,
 footer {
-    width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= TYPOGRAPHY ================= */
+h1,
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
 
-.navbar {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    padding: 15px 50px;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1000;
+    padding: 15px;
+    background: var(--primary-color);
 }
 
 .logo {
-    width: 120px;
+    width: 140px;
 }
 
-.navbar nav a {
-    color: #fff;
-    margin-left: 25px;
+/* ================= NAVIGATION ================= */
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style: none;
+}
+
+.navigation a {
     text-decoration: none;
-    font-weight: 500;
-    transition: .3s;
+    color: var(--white);
+    font-weight: bold;
 }
 
-.navbar nav a:hover {
-    color: #f4a261;
+.navigation a:hover {
+    color: var(--accent2-color);
 }
 
 /* ================= HERO ================= */
-
 .hero {
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .hero img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
-.overlay {
+.hero h1 {
     position: absolute;
+    top: 20px;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, .6),
-            rgba(0, 0, 0, .3));
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
-    max-width: 700px;
+    background: rgba(38, 70, 83, 0.8);
+    color: var(--white);
+    padding: 15px;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background: var(--white);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.hero-content p {
-    margin-bottom: 30px;
-    font-weight: 300;
+.hero article img {
+    width: 100px;
+    border-radius: 5px;
 }
 
-/* ================= BUTTONS ================= */
-
-.btn {
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin: 8px;
-    display: inline-block;
-    transition: .3s;
+/* ================= HISTORY ================= */
+.history {
+    margin: 40px 0;
 }
 
-.main-btn {
-    background: #f4a261;
-    color: #fff;
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    align-items: center;
 }
 
-.ghost-btn {
-    border: 2px solid #fff;
-    color: #fff;
+.history-grid img {
+    width: 100%;
+    border-radius: 5px;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+/* ================= ADVENTURES ================= */
+.adventures {
+    margin: 40px 0;
 }
 
-/* ======== Company Info Centered ========= */
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
 
+.adventure-gallery img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.adventure-gallery figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ================= CONTACT PAGE ================= */
 .company-info {
     text-align: center;
     margin: 30px 0;
 }
 
-.company-info h1 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* ===============CONTACT GRID ============ */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-bottom: 40px;
 }
 
-/* ================MAP STYLING =========== */
 .map iframe {
     width: 100%;
     height: 350px;
     border: none;
 }
-
-/* ================= Form Styling ========= */
 
 .contact-form {
     display: flex;
@@ -185,241 +199,60 @@ fieldset {
     border: none;
 }
 
+.checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
 button {
-    margin-top: 10px;
     padding: 10px;
     background: var(--secondary-color);
-    color: white;
+    color: var(--white);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 button:hover {
-    background: var(--primary-color);
+    background: var(--primary);
 }
 
-/*=============== EMPLOYEES SECTION ======= */
-
+/* ================= EMPLOYEES ================= */
 .employees {
-    border: 1px solid #ccc;
+    margin: 40px 0;
     padding: 20px;
+    border: 1px solid #ddd;
 }
 
 .employee-gallery {
     display: flex;
     justify-content: space-around;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .employee-gallery img {
     width: 120px;
     height: 120px;
     object-fit: cover;
+    border-radius: 50%;
 }
 
-/* ================= MAIN ================= */
-
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 20px;
-}
-
-.about-preview {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* FEATURE CARDS */
-
-.feature-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
-    transition: .4s;
-    text-align: center;
-}
-
-.feature-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-}
-
-/* CTA */
-
-.cta {
-    margin-top: 70px;
-    text-align: center;
-    background: #0b6e4f;
-    color: white;
-    padding: 60px;
-    border-radius: 15px;
-}
-
-/* ================= SCROLL ANIMATION ================= */
-
-.reveal {
-    opacity: 0;
-    transform: translateY(60px);
-    transition: all .8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ===================================
-   GLOBAL STYLES
-=================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    color: var(--accent1-color);
-}
-
-header,
-main,
-footer {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* ===================================
-   TYPOGRAPHY
-=================================== */
-h1,
-h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-p,
-section,
-article,
-nav {
-    margin: 16px;
-    padding: 8px;
-}
-
-/* ===================================
-   HEADER
-=================================== */
-.site-header {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    align-items: center;
-    background: var(--primary-color);
-    padding: 12px;
-}
-
-.logo {
-    width: 120px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--primary);
-    padding: 10px 20px;
-}
-
-header img {
-    height: 65px;
-}
-
-/* NAVIGATION */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: bold;
-    transition: 0.3s ease;
-}
-
-nav a:hover {
-    color: var(--accent2-color);
-}
-
-/* ===================================
-   HISTORY SECTION
-=================================== */
-section {
-    background: var(--white);
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-/* ===================================
-   ADVENTURE GRID
-=================================== */
-.adventures {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-}
-
-.card {
-    text-align: center;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.card img:hover {
-    transform: scale(1.05);
-}
-
-.card span {
-    display: block;
-    margin-top: 6px;
-    font-weight: bold;
-    color: var(--dark);
-}
-
-/* ===================================
-   FOOTER
-=================================== */
+/* ================= FOOTER ================= */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--accent1-color);
-    color: white;
+    color: var(--white);
     padding: 15px;
+    margin-top: 40px;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 10px;
 }
 
 .socialmedia a {
@@ -428,24 +261,42 @@ footer {
 
 .socialmedia img {
     width: 30px;
-    margin-left: 10px;
-    transition: transform 0.3s;
 }
 
-.socialmedia img:hover {
-    transform: scale(1.2);
-}
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
 
-/* ================= MOBILE ================= */
-
-@media(max-width:768px) {
-
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .site-header {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .navbar {
-        padding: 15px 20px;
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
+    .hero article {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .history-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .adventure-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }

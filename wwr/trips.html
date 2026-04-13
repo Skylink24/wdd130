@@ -3,53 +3,147 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Trips</title>
-    <img src="images/logo.png" alt="Company Logo" class="logo">
-    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+      content="Explore exciting white water rafting trips including half-day, full-day, and extreme adventures with expert guides.">
+    <meta name="author" content="Pelemo Ekundayo Gbenga">
+
+    <title>Trips | White Water Rafting</title>
+
+    <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <nav>
-                <h2>Whitewater Rafting Company</h2>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="trips.html">Trips</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-                </ul>
-            </nav>
-        </div>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <img src="images/logo.png" alt="White Water Rafting Company Logo" class="logo">
+
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+
     </header>
 
-    <section class="container">
-        <h1>Our Adventures</h1>
 
-        <div class="card-container">
+    <!-- ================= MAIN ================= -->
+    <main>
 
-            <div class="card">
-                <h3>Mountain Hiking</h3>
-                <p>3-day guided hiking adventure with equipment included.</p>
+        <h1>Our Rafting Trips</h1>
+
+        <!-- CTA -->
+        <section class="cta">
+            <h2>Need Help Choosing a Trip?</h2>
+            <p>Contact our team for expert recommendations and booking assistance.</p>
+            <a href="contact.html">
+                <button>Contact Us</button>
+            </a>
+        </section>
+
+
+        <!-- TRIP CARDS -->
+        <section class="trip-cards">
+
+            <h2>Available Adventures</h2>
+
+            <div class="trip-grid">
+
+                <article class="trip-card">
+                    <img src="images/adventure1.jpg" alt="Rafting through intense river rapids">
+                    <h3>Extreme Rapids</h3>
+                    <p>For thrill-seekers looking for an adrenaline-filled experience through
+                        powerful rapids.</p>
+                    <p><strong>Duration:</strong> Full Day</p>
+                    <p><strong>Difficulty:</strong> Advanced</p>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/adventure2.jpg"
+                      alt="Guided rafting experience with professionals">
+                    <h3>Guided River Tour</h3>
+                    <p>Enjoy a safe and scenic rafting experience led by our expert guides.</p>
+                    <p><strong>Duration:</strong> Half Day</p>
+                    <p><strong>Difficulty:</strong> Beginner</p>
+                </article>
+
+                <article class="trip-card">
+                    <img src="images/adventure3.jpg" alt="Team rafting adventure working together">
+                    <h3>Team Adventure</h3>
+                    <p>Perfect for groups and team-building experiences with exciting river
+                        challenges.</p>
+                    <p><strong>Duration:</strong> Full Day</p>
+                    <p><strong>Difficulty:</strong> Intermediate</p>
+                </article>
+
             </div>
 
-            <div class="card">
-                <h3>River Rafting</h3>
-                <p>Exciting water adventure with professional safety gear.</p>
-            </div>
+        </section>
 
-            <div class="card">
-                <h3>Desert Safari</h3>
-                <p>Explore beautiful desert landscapes and wildlife.</p>
-            </div>
 
-        </div>
+        <!-- TABLE SECTION -->
+        <section class="trip-table">
 
-    </section>
+            <h2>Trip Comparison</h2>
 
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Trip</th>
+                        <th>Duration</th>
+                        <th>Difficulty</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Extreme Rapids</td>
+                        <td>Full Day</td>
+                        <td>Advanced</td>
+                        <td>$150</td>
+                    </tr>
+
+                    <tr>
+                        <td>Guided River Tour</td>
+                        <td>Half Day</td>
+                        <td>Beginner</td>
+                        <td>$80</td>
+                    </tr>
+
+                    <tr>
+                        <td>Team Adventure</td>
+                        <td>Full Day</td>
+                        <td>Intermediate</td>
+                        <td>$120</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <p>© 2026 Whitewater Rafting Company</p>
+
+        <p>© 2026 White Water Rafting | Pelemo Ekundayo Gbenga</p>
+
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.jpg" alt="Visit our Facebook page"></a>
+            <a href="#"><img src="images/linkedin.jpg" alt="Visit our LinkedIn page"></a>
+            <a href="#"><img src="images/instagram.jpg" alt="Visit our Instagram page"></a>
+        </nav>
+
     </footer>
 
 </body>

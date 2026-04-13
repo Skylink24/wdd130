@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>White Water Rafting | Adventure Starts Here</title>
+    <title>Home | White Water Rafting</title>
+
     <meta name="description"
-      content="Experience unforgettable white water rafting adventures. Explore thrilling trips, expert guides, and breathtaking rivers.">
+      content="Experience unforgettable white water rafting adventures with expert guides. Explore thrilling trips and breathtaking rivers.">
     <meta name="author" content="Pelemo Ekundayo Gbenga">
 
     <link rel="stylesheet" href="styles/rafting.css">
@@ -15,108 +16,113 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
-    <header class="navbar">
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
 
-        <img src="images/logo.png" alt="Rafting Logo" class="logo">
+        <img src="images/logo.png" alt="White Water Rafting Company Logo" class="logo">
 
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="trips.html">Trips</a>
-            <a href="contact.html">Contact</a>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
         </nav>
 
     </header>
 
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-
-        <img src="images/hero.jpg" alt="Rafting Adventure">
-
-        <div class="overlay"></div>
-
-        <div class="hero-content">
-            <h1>Experience The Ultimate Adventure</h1>
-            <p>Premium white-water rafting experiences crafted for thrill seekers.</p>
-
-            <div class="hero-buttons">
-                <a href="trips.html" class="btn main-btn">Explore Trips</a>
-                <a href="contact.html" class="btn ghost-btn">Book Adventure</a>
-            </div>
-        </div>
-
-    </section>
 
     <!-- ================= MAIN ================= -->
     <main>
 
-        <section class="about-preview reveal">
+        <!-- HERO -->
+        <div class="hero">
+
+            <img src="images/hero.jpg" alt="Group enjoying white water rafting adventure">
+
+            <h1>Experience The Ultimate Adventure</h1>
+
+            <article>
+                <img src="images/raft1.jpg" alt="Happy rafting participants smiling after trip">
+
+                <p>
+                    Premium white-water rafting experiences crafted for thrill seekers.
+                    Discover nature, excitement, and unforgettable memories.
+                </p>
+            </article>
+
+        </div>
+
+
+        <!-- WHY CHOOSE US -->
+        <section class="about-preview">
+
             <h2>Why Choose Us</h2>
+
             <p>
                 We combine safety, excitement, and unforgettable landscapes to create
                 world-class rafting adventures guided by certified professionals.
             </p>
+
         </section>
 
+
+        <!-- FEATURES -->
         <section class="features">
 
-            <div class="feature-card reveal">
-                <img src="images/raft1.jpg" alt="">
-                <h3>Extreme Rapids</h3>
-                <p>Adrenaline-filled journeys through powerful river currents.</p>
-            </div>
+            <h2>Our Experiences</h2>
 
-            <div class="feature-card reveal">
-                <img src="images/raft2.jpg" alt="">
-                <h3>Scenic Routes</h3>
-                <p>Explore breathtaking valleys and untouched nature.</p>
-            </div>
+            <div class="adventure-gallery">
 
-            <div class="feature-card reveal">
-                <img src="images/raft3.jpg" alt="">
-                <h3>Family Friendly</h3>
-                <p>Safe adventures designed for all experience levels.</p>
+                <figure>
+                    <img src="images/raft1.jpg" alt="Rafting through powerful river rapids">
+                    <figcaption>Extreme Rapids</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft2.jpg" alt="Rafting through scenic mountain river">
+                    <figcaption>Scenic Routes</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/raft3.jpg" alt="Family enjoying safe rafting experience">
+                    <figcaption>Family Friendly</figcaption>
+                </figure>
+
             </div>
 
         </section>
 
-        <section class="cta reveal">
+
+        <!-- CTA -->
+        <section class="cta">
+
             <h2>Your Next Adventure Awaits</h2>
+
             <p>Book today and experience nature like never before.</p>
-            <a href="trips.html" class="btn main-btn">Start Now</a>
+
+            <a href="trips.html">
+                <button>Start Your Adventure</button>
+            </a>
+
         </section>
 
     </main>
+
 
     <!-- ================= FOOTER ================= -->
     <footer>
 
         <p>© 2026 White Water Rafting | Pelemo Ekundayo Gbenga</p>
 
-        <div class="socials">
-            <img src="images/facebook.jpg" alt="">
-            <img src="images/instagram.jpg" alt="">
-            <img src="images/linkedin.jpg" alt="">
-        </div>
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.jpg" alt="Visit our Facebook page"></a>
+            <a href="#"><img src="images/linkedin.jpg" alt="Visit our LinkedIn page"></a>
+            <a href="#"><img src="images/instagram.jpg" alt="Visit our Instagram page"></a>
+        </nav>
 
     </footer>
-
-    <!-- Scroll Animation Script -->
-    <script>
-        const reveals = document.querySelectorAll(".reveal");
-
-        window.addEventListener("scroll", () => {
-            reveals.forEach(el => {
-                const top = el.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-
-                if (top < windowHeight - 100) {
-                    el.classList.add("active");
-                }
-            });
-        });
-    </script>
 
 </body>
 
